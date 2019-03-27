@@ -6,3 +6,12 @@ const ejs = require("ejs");
 //creating express app, initializing express
 const app = express();
 
+//connect to mongodb
+mongoose.connect('mongodb://localhost/employees', {useNewUrlParser:true});
+mongoose.Promise = global.Promise;
+
+
+//built in middleware within express function, used to serve css & javascript files
+app.use(bodyParser.json());
+app.use("/", express.static("views"))
+
