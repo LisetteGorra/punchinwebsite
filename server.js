@@ -22,3 +22,8 @@ app.get("/api/get", (req,res)=>{
 
 const port = process.env.PORT;
 const ip = process.env.IP;
+
+app.listen(port, ip, function(){
+  console.log(`THE PORT IS WORKING ON: ${port}`);
+  console.log(`THE IP IS WORKING ON: ${ip}`);
+})
