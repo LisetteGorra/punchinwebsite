@@ -15,3 +15,10 @@ mongoose.Promise = global.Promise;
 app.use(bodyParser.json());
 app.use("/", express.static("views"))
 
+//homepage 
+app.get("/api/get", (req,res)=>{
+    res.send(req.body)
+})
+
+const port = process.env.PORT;
+const ip = process.env.IP;
